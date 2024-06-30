@@ -17,7 +17,7 @@ class FaceRecognitionApp(cust.CTk):
         self.title(title)
         self.geometry(f"{width}x{height}")
 
-        self.model = load_model('face_recognition_model_trained.h5')
+        self.model = load_model('face_recognition_model_trained_latest.h5')
         self.class_names = ['angelina jolie','brad pitt','denzel washington','hugh jackman','jennifer lawrence','johnny depp','kate winslet','leo dicaprio','megan fox','natalie portman','nicole kidman','robert downey jr','sandra bullock','scarlett johansson','tom cruise','tom hanks','will smith']
 
         self.control_frame = cust.CTkFrame(self)
@@ -80,7 +80,7 @@ class FaceRecognitionApp(cust.CTk):
         cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    app = FaceRecognitionApp("Face Recognition App", 800, 600)
+    app = FaceRecognitionApp("Face Recognition App", 1000, 800)
     app.mainloop()
 
 # import cv2
